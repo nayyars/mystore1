@@ -10,7 +10,10 @@ import { Users } from '../Models/users';
 export class LoginService  implements OnInit{
   private isLocalStorageAvailable = typeof localStorage !== 'undefined';
    private baseLoginPostApi: string ='http://localhost:3000/users';
-  constructor(private http:HttpClient, private router : Router) { }
+   
+  constructor(private http:HttpClient, private router : Router) {
+    this.baseLoginPostApi="https://6681d80c04acc3545a07b615.mockapi.io/users";
+   }
   ngOnInit(): void {
 
   }

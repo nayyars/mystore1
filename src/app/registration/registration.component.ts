@@ -38,6 +38,7 @@ export class RegistrationComponent implements OnInit {
 
             this.registrationServices.RegisterUser(form).subscribe(result=>{
             this.registeredUser=result;
+            alert(JSON.stringify(result));
             this._router.navigate(['login']);
             });
         }
