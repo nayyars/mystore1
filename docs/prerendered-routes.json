@@ -1,0 +1,19 @@
+{
+  "routes": [
+    "/all",
+    "/all/all",
+    "/all/all/cart",
+    "/all/cart",
+    "/dashboard",
+    "/home",
+    "/home/card",
+    "/home/edituser",
+    "/home/gallery",
+    "/home/lastorders",
+    "/home/product",
+    "/home/user",
+    "/login",
+    "/register",
+    "/test"
+  ]
+}
