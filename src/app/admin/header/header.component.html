@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" style="margin-left: 30px;" routerLink="graphs">
+      <img [src]="ImageDP" alt="Logo" height="30" class="d-inline-block align-top mr-4">
+      Products
+  </a>
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+            <a class="nav-link" [routerLink]="goForBuy">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                Buy 
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" [routerLink]="oldOrders">
+                <i class="fa-regular fa-bags-shopping"></i>
+                                Order History 
+            </a>
+        </li>
+            <li class="nav-item dropdown" *ngIf="isVisible">
+
+            <div class="dropdown">
+                <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-brands fa-product-hunt"></i> Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" routerLink="/home/product">
+                    <i class="fa-brands fa-product-hunt"> </i> Product List
+                  </a></li>
+                  <li><a class="dropdown-item" routerLink="/home/card">
+                    <i class="fa-brands fa-product-hunt"></i> Product Cards</a></li>
+                </ul>
+              </div>
+          </li>
+          <li class="nav-item active" *ngif="isVisible">
+            <a class="nav-link" routerLink="user">
+                <i class="fas fa-user"></i> 
+                User
+            </a>
+        </li>
+         
+          <li class="nav-item">
+              <a class="nav-link" routerLink="gallery">
+                  <i class="fa-brands fa-instagram"></i> Gallery
+              </a>
+          </li>
+          <div style="margin-right: 50px;">
+              <li class="nav-item content-justify-right">
+                  <div class="content-justify-right">
+                      <a (click)="Logout()" class="nav-link btn btn-sm btn-outline-success"> Logout [{{username}}] </a>
+                  </div>
+              </li>
+          </div>
+      </ul>
+  </div>
+</nav>

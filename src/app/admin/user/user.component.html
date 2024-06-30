@@ -1,0 +1,88 @@
+
+<!-- ------------------- -->
+
+<div class="container mt-4">   
+   
+   
+  <div class="row"> 
+     <div class="col-12 card-footer" >  
+      <div class="card">
+        <div class="card-header">
+          <div class="card-text text-muted">
+            <div class="row"> 
+              <div class="col"> 
+                <b>User :</b> Users
+
+              </div>
+              <!-- <a routerLink="product" class="btn btn-primary"> Product List</a>
+              <a routerLink="/home/user" class="btn btn-primary"> User</a> -->
+              <div class="col-auto">
+                <!-- Button aligned to the right -->
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <span> <i class="fas fa-add"></i></span>   Create New
+                </button>
+                
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr style="background-color:#F8F8F8;">
+                <th scope="col">FullName</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Department</th>
+                <th scope="col">Active</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of UserList">
+                <th scope="row">{{user.fullname}}</th>
+                <td>{{user.username}}</td>
+                <td>{{user.department}}</td>
+                <td>{{user.IsActive}}</td>
+                <td>
+                  <button class="btn btn-link p-0" (click)="Edit(user.id)">
+                      <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn btn-link text-danger p-0 ms-2" (click)="DeleteUser(user.id)">
+                      <i class="fas fa-trash-alt"></i>
+                  </button>
+              </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+     </div>
+  </div>
+
+
+  <!-- ------------------------Add Model ------------------ -->
+
+  <!-- Button trigger modal -->
+ 
+
+<!-- Modal Add product -->
+
+
+
+<!-- -----------Edit product ------popup-- -->
+
+</div>
+
+
+
+
+
+
+
+<!-- ----------------- Create User Model ----------- -->
+<!-- Button trigger modal -->
+
+<app-user-edit-popup></app-user-edit-popup>
+
+<app-user-popups></app-user-popups>

@@ -1,0 +1,9 @@
+.notification {
+  transition: transform 0.5s ease-out;
+  transform: translateY(-200%);
+  z-index: 1050; /* Ensure it appears above other content */
+}
+
+.notification.show {
+  transform: translateY(-0%);
+}

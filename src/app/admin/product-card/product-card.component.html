@@ -1,0 +1,59 @@
+<div class="container-fluid">
+ 
+<div class="row">
+  <div class="col-1">
+    <i>Category</i>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Home</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Medicine</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" >
+      <label class="form-check-label" for="flexSwitchCheckDisabled">Education</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked >
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">General</label>
+    </div>
+  </div>
+  <div class="col-10">
+    <div class="container"> 
+      <div class="row mt-1">
+        <div class="input-group">
+          <div class="input-group-text" id="btnGroupAddon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input type="text" class="form-control" placeholder="Search Product.sa" aria-label="Input group example" aria-describedby="btnGroupAddon">
+        </div>
+        <div class="row" >
+            <div class="col-3 mt-3"  *ngFor="let product of productList">
+                <div class="card shadow-sm">
+                    <img [src]="product.imageUrl" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ product.name }}</h5>
+                      <p class="card-text text-muted">{{ product.category }}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="price">
+                          <span class="text-primary fw-bold">SR. {{ product.price }}</span>
+                        </div>
+                        <div class="quantity">
+                          <span class="badge bg-secondary">{{ product.quantity }} in stock</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn btn-primary mt-3" (click)="addToCart(product)">Add to Cart</button>
+                    </div>
+                  </div>  
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+</div>

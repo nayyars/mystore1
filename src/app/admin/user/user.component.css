@@ -1,0 +1,12 @@
+.img{
+    width: 70px;
+    height: 70px;
+    border-radius: 2px;
+    border: 1px solid white;
+
+}
+.card-body-css{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    text-align: center;
+}

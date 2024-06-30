@@ -1,0 +1,26 @@
+.imgcss{
+    width: 30%;
+    height: 30%;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-image {
+    width: 50px; /* Adjust the width as needed */
+  }
+  
+  .item-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:#1A92BC;
+    color: rgb(227, 217, 217);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 16px; /* Adjust the font size as needed */
+    font: bold;
+  }
+  

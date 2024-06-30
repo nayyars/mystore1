@@ -1,0 +1,366 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullname": "Mohammad Nayyar",
+      "username": "nayyar",
+      "password": "mmm",
+      "department": "India",
+      "profile": "dewrewrew42525fff"
+    },
+    {
+      "id": "b8d9",
+      "fullname": "Mohammad Nayyar",
+      "username": "nayyar1",
+      "email": "nayyar.it@gmail.com",
+      "password": "mmm",
+      "confirmPassword": "mmm",
+      "phone": "0560886018",
+      "address": "Near Khana Khazana Hara Riyadh"
+    },
+    {
+      "id": "40fa",
+      "fullname": "nayyar najmuddin",
+      "username": "nayyar2",
+      "email": "nayyar.it@gmail.com",
+      "password": "mmm",
+      "confirmPassword": "mmm",
+      "phone": "0560886018",
+      "address": "Near Khana Khazana Hara Riyadh"
+    },
+    {
+      "id": "ecbd",
+      "fullname": "Uzma Khan",
+      "username": "uzma",
+      "password": "123",
+      "department": "HR",
+      "IsActive": true
+    }
+  ],
+  "Orders": [
+    {
+      "id": "0baf",
+      "orderid": "fofqc85oh",
+      "CustomerName": "nayyar2",
+      "OrderDate": "2024-06-29T15:11:32.804Z",
+      "OrderDetails": [
+        {
+          "OrderDetailID": "64y93szsb",
+          "orderidd": "c34cfwg48",
+          "ProductID": "ce8b",
+          "ProductName": "Book",
+          "price": "12",
+          "Quantity": 1,
+          "ProductCategory": "Communication",
+          "TotalAmount": 12,
+          "customername": "nayyar2"
+        }
+      ]
+    },
+    {
+      "id": "36ce",
+      "orderid": "ybdlr4pj2",
+      "CustomerName": "nayyar",
+      "OrderDate": "2024-06-29T15:48:11.897Z",
+      "OrderDetails": [
+        {
+          "OrderDetailID": "h5ldkgviz",
+          "orderidd": "88cvxrw3n",
+          "ProductID": "ce8b",
+          "ProductName": "Book",
+          "price": "12",
+          "Quantity": 1,
+          "ProductCategory": "Communication",
+          "TotalAmount": 12,
+          "customername": "nayyar"
+        }
+      ]
+    },
+    {
+      "id": "4bbe",
+      "orderid": "5akzoq7g1",
+      "CustomerName": "nayyar",
+      "OrderDate": "2024-06-29T16:44:04.600Z",
+      "OrderDetails": [
+        {
+          "OrderDetailID": "mcsl0ggma",
+          "orderidd": "9b26ot3c0",
+          "ProductID": "2b97",
+          "ProductName": "Bed Sheet",
+          "price": "500",
+          "Quantity": 3,
+          "ProductCategory": "Home Appliance",
+          "TotalAmount": 1500,
+          "customername": "nayyar"
+        },
+        {
+          "OrderDetailID": "dazlp7zyh",
+          "orderidd": "9b26ot3c0",
+          "ProductID": "ce8b",
+          "ProductName": "Book",
+          "price": "12",
+          "Quantity": 1,
+          "ProductCategory": "Communication",
+          "TotalAmount": 12,
+          "customername": "nayyar"
+        },
+        {
+          "OrderDetailID": "zk5codj8f",
+          "orderidd": "9b26ot3c0",
+          "ProductID": "8a0b",
+          "ProductName": "Book m",
+          "price": "12.3",
+          "Quantity": 1,
+          "ProductCategory": "Home Appliance",
+          "TotalAmount": 12.3,
+          "customername": "nayyar"
+        }
+      ]
+    },
+    {
+      "id": "f081",
+      "orderid": "cqjh2rjhb",
+      "CustomerName": "uzma",
+      "OrderDate": "2024-06-29T17:51:45.889Z",
+      "OrderDetails": [
+        {
+          "OrderDetailID": "fw42n5wrc",
+          "orderidd": "nnivo69lw",
+          "ProductID": "8a0b",
+          "ProductName": "Book m",
+          "price": "12.3",
+          "Quantity": 1,
+          "ProductCategory": "Home Appliance",
+          "TotalAmount": 12.3,
+          "customername": "uzma"
+        },
+        {
+          "OrderDetailID": "e4pf0grjw",
+          "orderidd": "nnivo69lw",
+          "ProductID": "ce8b",
+          "ProductName": "Book",
+          "price": "12",
+          "Quantity": 1,
+          "ProductCategory": "Communication",
+          "TotalAmount": 12,
+          "customername": "uzma"
+        },
+        {
+          "OrderDetailID": "68ufph14n",
+          "orderidd": "nnivo69lw",
+          "ProductID": "2b97",
+          "ProductName": "Bed Sheet",
+          "price": "500",
+          "Quantity": 1,
+          "ProductCategory": "Home Appliance",
+          "TotalAmount": 500,
+          "customername": "uzma"
+        }
+      ]
+    },
+    {
+      "id": "7624",
+      "orderid": "nlxj5xy2u",
+      "CustomerName": "uzma",
+      "OrderDate": "2024-06-29T17:57:01.665Z",
+      "OrderDetails": [
+        {
+          "OrderDetailID": "64g764xzi",
+          "orderidd": "zpcibrx40",
+          "ProductID": "8a0b",
+          "ProductName": "Book m",
+          "price": "12.3",
+          "Quantity": 3,
+          "ProductCategory": "Home Appliance",
+          "TotalAmount": 36.900000000000006,
+          "customername": "uzma"
+        },
+        {
+          "OrderDetailID": "giu21nioa",
+          "orderidd": "zpcibrx40",
+          "ProductID": "ce8b",
+          "ProductName": "Book",
+          "price": "12",
+          "Quantity": 2,
+          "ProductCategory": "Communication",
+          "TotalAmount": 24,
+          "customername": "uzma"
+        },
+        {
+          "OrderDetailID": "5l2d4w510",
+          "orderidd": "zpcibrx40",
+          "ProductID": "2b97",
+          "ProductName": "Bed Sheet",
+          "price": "500",
+          "Quantity": 1,
+          "ProductCategory": "Home Appliance",
+          "TotalAmount": 500,
+          "customername": "uzma"
+        }
+      ]
+    },
+    {
+      "id": "4ff9",
+      "orderid": "tx4v67wxv",
+      "CustomerName": "nayyar",
+      "OrderDate": "2024-06-29T18:27:34.844Z",
+      "OrderDetails": [
+        {
+          "OrderDetailID": "zvtnqxzlo",
+          "orderidd": "g44fgo45f",
+          "ProductID": "ce8b",
+          "ProductName": "Book",
+          "price": "12",
+          "Quantity": 1,
+          "ProductCategory": "Communication",
+          "TotalAmount": 12,
+          "customername": "nayyar"
+        },
+        {
+          "OrderDetailID": "12604iuxy",
+          "orderidd": "g44fgo45f",
+          "ProductID": "5107",
+          "ProductName": "Ciggarette",
+          "price": "90",
+          "Quantity": 3,
+          "ProductCategory": "Communication",
+          "TotalAmount": 270,
+          "customername": "nayyar"
+        },
+        {
+          "OrderDetailID": "r57b313e5",
+          "orderidd": "g44fgo45f",
+          "ProductID": "d07f",
+          "ProductName": "Chemistry book",
+          "price": "505",
+          "Quantity": 1,
+          "ProductCategory": "Educational",
+          "TotalAmount": 505,
+          "customername": "nayyar"
+        }
+      ]
+    }
+  ],
+  "Products": [
+    {
+      "id": "1",
+      "imageUrl": "",
+      "name": "Ciggarette",
+      "category": "Communication",
+      "price": "428.99",
+      "quantity": "1202"
+    },
+    {
+      "id": "8a0b",
+      "imageUrl": "",
+      "name": "Book m",
+      "category": "Home Appliance",
+      "price": "12.3",
+      "quantity": "22"
+    },
+    {
+      "id": "ce8b",
+      "imageUrl": "",
+      "name": "Book",
+      "category": "Communication",
+      "price": "12",
+      "quantity": "23"
+    },
+    {
+      "id": "2b97",
+      "imageUrl": "",
+      "name": "Bed Sheet",
+      "category": "Home Appliance",
+      "price": "500",
+      "quantity": "1000"
+    },
+    {
+      "id": "1a8d",
+      "imageUrl": "",
+      "name": "Coffee",
+      "category": "Home Appliance",
+      "price": "12.3",
+      "quantity": "232"
+    },
+    {
+      "id": "aa8d",
+      "imageUrl": "",
+      "name": "chair ",
+      "category": "Educational",
+      "price": "12.67",
+      "quantity": "500"
+    },
+    {
+      "id": "5107",
+      "imageUrl": "",
+      "name": "Ciggarette",
+      "category": "Communication",
+      "price": "90",
+      "quantity": "239"
+    },
+    {
+      "id": "8686",
+      "imageUrl": "",
+      "name": "Lighter",
+      "category": "Home Appliance",
+      "price": "700",
+      "quantity": "8800"
+    },
+    {
+      "id": "97ea",
+      "imageUrl": "",
+      "name": "Shoe",
+      "category": "Home Appliance",
+      "price": "12.3",
+      "quantity": "22"
+    },
+    {
+      "id": "8df4",
+      "imageUrl": "",
+      "name": "Tea",
+      "category": "Home Appliance",
+      "price": "20",
+      "quantity": "20"
+    },
+    {
+      "id": "3b75",
+      "imageUrl": "",
+      "name": "A.c",
+      "category": "Home Appliance",
+      "price": "54",
+      "quantity": "300"
+    },
+    {
+      "id": "7009",
+      "imageUrl": "",
+      "name": "Key",
+      "category": "Home Appliance",
+      "price": "20",
+      "quantity": "600"
+    },
+    {
+      "id": "0398",
+      "imageUrl": null,
+      "name": "Towel",
+      "category": "Home Appliance",
+      "price": "122",
+      "quantity": "888"
+    },
+    {
+      "id": "d07f",
+      "imageUrl": null,
+      "name": "Chemistry book",
+      "category": "Educational",
+      "price": "505",
+      "quantity": "1000"
+    },
+    {
+      "id": "17fb",
+      "imageUrl": "",
+      "name": "Fan",
+      "category": "Home Appliance",
+      "price": "12.3",
+      "quantity": "232"
+    }
+  ]
+}

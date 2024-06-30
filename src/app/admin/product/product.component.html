@@ -1,0 +1,179 @@
+<div class="container mt-4">   
+   
+   
+      <div class="row"> 
+         <div class="col-12 card-footer" >  
+          <div class="card">
+            <div class="card-header">
+              <div class="card-text text-muted">
+                <div class="row"> 
+                  <div class="col"> 
+                    <b>Products :</b> {{countProducts}}
+  
+                  </div>
+                  <!-- <a routerLink="product" class="btn btn-primary"> Product List</a>
+                  <a routerLink="/home/user" class="btn btn-primary"> User</a> -->
+                  <div class="col-auto">
+                    <!-- Button aligned to the right -->
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                     <span> <i class="fas fa-add"></i></span>    Create New Item 
+                    </button>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="card-body">
+              <table class="table table-hover">
+                <thead>
+                  <tr style="background-color:#F8F8F8;">
+                    <th scope="col">ProductName</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity Available</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of productList">
+                    <th scope="row">{{product.name}}</th>
+                    <td>{{product.category}}</td>
+                    <td> <b class="priceTypeCss">SAR</b>.{{product.price}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>
+                      <button class="btn btn-link p-0" (click)="getProductBeUpdated(product)">
+                          <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn btn-link text-danger p-0 ms-2" (click)="deleteUser(product)">
+                          <i class="fas fa-trash-alt"></i>
+                      </button>
+                  </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+         </div>
+      </div>
+
+
+      <!-- ------------------------Add Model ------------------ -->
+
+      <!-- Button trigger modal -->
+     
+
+<!-- Modal Add product -->
+<div class="modal fade" id="staticBackdrop"  #userEditModelID data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form [formGroup]="productformGroup">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"> Create New Product in Store</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="row"> 
+            <input type="hidden" formControlName="id">
+            <div class="col-12 "> 
+              <div class="form-floating mb-2">
+                <input type="text" formControlName="name" class="form-control" id="txtproductname" placeholder="anything place but mandatory">  
+              <label for="txtproductname" class="form-label">ProductName </label>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12">  
+              <div class="form-floating mb-3">
+                <select id="idcategory" formControlName="category" class="form-control input-sm"   placeholder="Category hgg" required>
+                  <option></option>
+                  <option *ngFor="let category of categoryList">{{category}}</option>
+                </select>
+                <label for="idcategory" class="form-label">Category</label>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12"> 
+              <div class="form-floating mb-3">
+                <input type="text" id="idprice" formControlName="price" class="form-control input-sm"   placeholder="price hgg" required>
+               <label for="idprice" class="form-label">price</label>
+             </div>
+             </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12"> 
+              <div class="form-floating mb-3">
+                <input type="text" id="idQuantity" formControlName="quantity" class="form-control input-sm"   placeholder="Quantity hgg" required>
+               <label for="idQuantity" class="form-label">Quantity</label>
+             </div>
+             </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" (click)="addProduct(productformGroup)" >Create</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+  
+
+<!-- -----------Edit product ------popup-- -->
+<div class="modal fade" id="staticBackdropEdit"  #staticBackdropEditID data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropEditLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form [formGroup]="productEditformGroup">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropEditLabel"> Edit Item Data </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="row"> 
+            <input type="hidden" formControlName="id">
+            <div class="col-12 "> 
+              <div class="form-floating mb-2">
+                <input type="text" formControlName="name" required class="form-control" id="txtproductname" placeholder="anything place but mandatory">  
+              <label for="txtproductname" class="form-label">ProductName </label>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12">  
+              <div class="form-floating mb-3">
+                <select id="idcategory" formControlName="category" class="form-control input-sm"   placeholder="Category hgg" required>
+                  <option></option>
+                  <option *ngFor="let category of categoryList">{{category}}</option>
+                </select>
+                <label for="idcategory" class="form-label">Category</label>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12"> 
+              <div class="form-floating mb-3">
+                <input type="text" id="idprice" formControlName="price" class="form-control input-sm"   placeholder="price hgg" required>
+               <label for="idprice" class="form-label">price</label>
+             </div>
+             </div>
+          </div>
+          <div class="row"> 
+            <div class="col-12"> 
+              <div class="form-floating mb-3">
+                <input type="text" id="idQuantity" formControlName="quantity" class="form-control input-sm"   placeholder="Quantity hgg" required>
+               <label for="idQuantity" class="form-label">Quantity</label>
+             </div>
+             </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" (click)="SubmitProductUpdate(productEditformGroup)" >Update Item</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+</div>
+
+

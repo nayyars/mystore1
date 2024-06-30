@@ -1,0 +1,51 @@
+
+<div class="container mt-4" style="max-height: 800px; overflow-y: scroll;font-family:Verdana, Geneva, Tahoma, sans-serif;" >
+    <div class="card">
+      <div class="card-header">
+        Orders
+      </div>
+      <div class="card-body bg-light mt-2"  *ngFor="let order of  OrdersForCurrentUserList">
+        <div class="row">
+           <div class="col-4">
+            <h6 class="card-title">OrderNo# :{{order.orderid}}</h6>
+            <p class="h6">Date :{{order.OrderDate}}</p>
+            <p class="h6"> CustomerName :{{order.CustomerName}}</p>
+           </div>
+           <div class="col-8 shadow" style="background: white;">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <td>ProdID</td>
+                  <td>Name</td>
+                  <td>Category</td>
+                  <td>Quantity</td>
+                  <td>Price</td>
+                  <td colspan="2">Total</td>
+                </tr>
+              </thead>
+              <tbody style="font-size: 14px;">
+                <tr *ngFor="let details of  order.OrderDetails">
+                  <td>{{details.OrderDetailID}}</td>
+                  <td>{{details.ProductName}}</td>
+                  <td>{{details.ProductCategory}}</td>
+                  <td>{{details.Quantity}}</td>
+                  <td>{{details.price}}</td>
+                  <td>{{details.TotalAmount}}</td>
+  
+                  <td>          
+                      <button type="button" (click)="retrunOrder()" class="btn btn-info btn-sm"> <i class="fa-solid fa-bags-shopping"></i> 
+                        <i class="fa-solid fa-bags-shopping"></i>
+                        Return </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+           </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+ 
+
+  

@@ -1,0 +1,31 @@
+.card {
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .quantity {
+    font-size: 0.9rem;
+  }
+  

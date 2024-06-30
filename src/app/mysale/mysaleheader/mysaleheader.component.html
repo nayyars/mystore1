@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <app-notification></app-notification>
+
+      <a class="navbar-brand" href="#">
+        <img src="logos.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"> 
+        <span> <b>  HomeStore.com </b></span>
+      </a>
+  
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSearch">
+
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item content-justify-right">
+            <a class="nav-link" [routerLink]="target"   tabindex="-1" aria-disabled="true">
+              <i class="fas fa-user"></i>
+              User Profile [{{CurrentUser}}]
+            </a>
+          </li>
+          <li class="nav-item content-justify-right">
+            <div class="content-justify-right">
+                <a (click)="Logout()" class="nav-link btn btn-sm btn-outline-success"> Logout</a>
+            </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
