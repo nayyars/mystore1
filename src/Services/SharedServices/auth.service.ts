@@ -10,6 +10,7 @@
           providedIn: 'root'
         })
         export class AuthService {
+          private isLocalStorageAvailable = typeof localStorage !== 'undefined';
           getApiUrl:string="http://localhost:3000/users";    // Get User   , geturl and object
           
           private userListSubject: BehaviorSubject<Users[]> = new BehaviorSubject<Users[]>([]);
@@ -73,12 +74,13 @@
           //  -------set token --
           setToken(token:string):void
           {
-
+              if(this.isLocalStorageAvailable){
               localStorage.setItem('token',token);
+              }
             }
             getToken():string|null
             {
-              if (typeof window !== 'undefined') {
+              if(this.isLocalStorageAvailable){
                 return localStorage.getItem('token');
             }
             return null;
@@ -90,8 +92,9 @@
 
               logout()
               {
+                if(this.isLocalStorageAvailable){
                     localStorage.removeItem('token');
-                    this._routeMe.navigate(['login']);
+                    this._routeMe.navigate(['login']);}
               }
 
 

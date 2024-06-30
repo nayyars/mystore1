@@ -8,6 +8,7 @@ import { Users } from '../Models/users';
   providedIn: 'root'
 })
 export class LoginService  implements OnInit{
+  private isLocalStorageAvailable = typeof localStorage !== 'undefined';
    private baseLoginPostApi: string ='http://localhost:3000/users';
   constructor(private http:HttpClient, private router : Router) { }
   ngOnInit(): void {
@@ -44,19 +45,30 @@ export class LoginService  implements OnInit{
 
    // ---------Create a local storange ------ 
    setToken(user:any){
-        localStorage.setItem('logintoken',user);
+    if(this.isLocalStorageAvailable){
+        localStorage.setItem('logintoken',user);}
    }
    getToken(){
-    return localStorage.getItem("logintoken");
+    if(this.isLocalStorageAvailable){
+    return localStorage.getItem("logintoken");}
+    else{
+       return localStorage.getItem('');
+    }
    }
    clearToken(){
-    localStorage.removeItem('logintoken');
+    if(this.isLocalStorageAvailable){
+    localStorage.removeItem('logintoken');}
+    else{
+      return localStorage.removeItem('');
+    }
    }
    IsLoggedIn():boolean{
+    if(this.isLocalStorageAvailable){
       if(this.getToken())
       {return true; }
       else 
       {return false;}
+}  else{ return false; }
    }
    Logout(){
      this.clearToken();
