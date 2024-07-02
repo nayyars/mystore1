@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { RegistrationService } from '../../Services/SharedServices/registration.service';
 import { Users } from '../../Services/Models/users';
 
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,RouterLink],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.css'
 })
@@ -38,7 +38,6 @@ export class RegistrationComponent implements OnInit {
 
             this.registrationServices.RegisterUser(form).subscribe(result=>{
             this.registeredUser=result;
-            alert(JSON.stringify(result));
             this._router.navigate(['login']);
             });
         }

@@ -12,7 +12,8 @@ export class LoginService  implements OnInit{
    private baseLoginPostApi: string ='http://localhost:3000/users';
    
   constructor(private http:HttpClient, private router : Router) {
-    this.baseLoginPostApi="https://6681d80c04acc3545a07b615.mockapi.io/users";
+    //this.baseLoginPostApi="https://6681d80c04acc3545a07b615.mockapi.io/users";
+    //this.baseLoginPostApi="https://api.jsonbin.io/v3/b/6681f52dacd3cb34a85f94c5";
    }
   ngOnInit(): void {
 
@@ -23,9 +24,11 @@ export class LoginService  implements OnInit{
 
       //   username and pasword is  indivisual so we need to create json data 
       const loginData = {username , password };
+      
       return this.http.get<Users[]>(this.baseLoginPostApi).subscribe({
         next:userslist=>{ 
                 const isexist=userslist.find(aUser=>aUser.username==username && aUser.password==password);
+
                 if(isexist){
                   console.log(isexist);
                   // ---- convert userdata in  json string because localstorage only support string ---
@@ -35,6 +38,7 @@ export class LoginService  implements OnInit{
                 }
                 else{
                   console.log(this.IsLoggedIn());
+                  alert('Invalid credentials.');
                   this.router.navigate(['login']);
                   console.log('user dont exists . check your username and password that provided.');
                 }

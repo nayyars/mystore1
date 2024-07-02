@@ -10,7 +10,8 @@
         <div class="card shadow border-0 mt-3"  *ngFor="let product of disProductList">
             <div class="row"> 
               <div class="col-2"> 
-               <img src="loginpic.jpeg" class="img-thumbnail imgscr">
+               <img src="./logos.jpg" class="card-img-top imgcss" alt="Product Image">
+
               </div>
               <div class="col-10">
                 <div class="card-body">
@@ -112,6 +113,7 @@
               <td>{{product.price}}</td>
               <td>{{product.Quantity}}</td>
               <td>{{product.TotalAmount}}</td>
+
             </tr>
             <tr>
               <td colspan="4" class="text-center">Sub Totle (SAR. {{this.totalAmount }})</td>

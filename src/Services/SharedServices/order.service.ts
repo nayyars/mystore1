@@ -4,7 +4,7 @@ import { OrderDetails, OrderMaster } from '../Models/order-master';
 import { LoginService } from './login.service';
 import { Users } from '../Models/users';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, catchError, of, throwError } from 'rxjs';
 import { map } from 'jquery';
 
 @Injectable({
@@ -31,7 +31,7 @@ export class OrderService {
         
        const OrderPayload =
         { 
-          orderid:GenOrderID,
+          orderid:COrderID,
           CustomerName: username,
           OrderDate:new Date(),
           OrderDetails : _OrderDetails
@@ -73,5 +73,13 @@ export class OrderService {
       const getApiUrl="http://localhost:3000/Orders";    // Get User   , geturl and object
       return this._http.get<OrderMaster[]>(getApiUrl); 
     }
-    
+  //  -----------------  
+  
+
+  deleteOrderDetail(orderId: string, orderDetailId: string): Observable<any> {
+    //return this._http.delete<any>(`${this.orderApiUrl}/Orders/${orderId}/OrderDetails/${orderDetailId}`);
+    return this._http.delete<any>(this.orderApiUrl+"/"+orderId) ; //(`${this.orderApiUrl}/?orderid=${orderId}/OrderDetails/${orderDetailId}`);
+
+  }
+
 }

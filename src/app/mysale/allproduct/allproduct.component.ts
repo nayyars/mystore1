@@ -36,15 +36,14 @@ constructor(private service:ProductsService, private _cartService:CartService,
   this.target='cart';
  }
 
-// ---------ngOnInit ------------------------
+// ----------------------------- ngOnInit ---------------------------------------------
 ngOnInit(): void {
  this.service.GetProductListService().subscribe(DataRec=>{
     this.productList=DataRec;
      this.countProducts= this.productList.length;
      // ---- clear CART local storage --- remove items list from local storage 
-     
-    // this._cartService.ClearCartInLocalStorage();
- })
+    //--------------------- this._cartService.ClearCartInLocalStorage(); --------------
+ }) 
 this. itemSelected();
 }
 
@@ -135,7 +134,14 @@ Search(Search : HTMLInputElement){
  onAllItemCheckboxChange(event:any){
   const val = event.target.checked;
   if(val){
-   this.productList= this.productList.filter(item=>item.category==='Home Appliance');
+   //this.productList= this.productList.filter(item=>item.category==='Home Appliance');
+    //this.productList= this.productList.filter(item=>item.category==='Home Appliance');
+    this.service.GetProductListService().subscribe(DataRec=>{
+      this.productList=DataRec;
+       this.countProducts= this.productList.length;
+       // ---- clear CART local storage --- remove items list from local storage 
+      //--------------------- this._cartService.ClearCartInLocalStorage(); --------------
+   }) 
   } else{
     this .fullList();
   }

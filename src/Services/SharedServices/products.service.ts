@@ -10,8 +10,11 @@ import { FormGroup } from '@angular/forms';
   providedIn: 'root'
 })
 export class ProductsService {
+   private BaseUrl='http://localhost:3000/Products';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+   //this.BaseUrl="https://6681d80c04acc3545a07b615.mockapi.io/Products";
+  }
 
   // --------Veriables section-----------------------------------
   ProductList:Products[]=[];    // This is our local list which need to be filled by the data recieved by GET API 
@@ -19,7 +22,6 @@ export class ProductsService {
   private ProjectSubject=new Subject<Products[]>();
   private ProjectSubjectBehav=new BehaviorSubject<Products[]>([]);
 
-  private BaseUrl='http://localhost:3000/Products';
     
   // ---------------- Fetch data from db-json -------------------
   GetProductListService():Observable<Products[]>
@@ -31,7 +33,6 @@ export class ProductsService {
               this.ProjectSubject.next(this.ProductList);
               //  this.ProjectSubject.asObservable();
               this.ProjectSubjectBehav.next(this.ProductList);
-
       },
       (error)=>{
          console.log("Error druing fetch data from GET api");

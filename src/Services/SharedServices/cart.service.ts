@@ -99,7 +99,6 @@ export class CartService {
     }
      ClearCartInLocalStorage(): void 
      {
-      alert('ClearCartInLocalStorage');
       if(this.isLocalStorageAvailable)
         {
       this.updateCartInLocalStorage([]);

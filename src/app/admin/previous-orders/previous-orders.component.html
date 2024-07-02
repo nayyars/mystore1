@@ -1,13 +1,13 @@
 
 <div class="container mt-4" style="max-height: 800px; overflow-y: scroll;font-family:Verdana, Geneva, Tahoma, sans-serif;" >
-    <div class="card">
+    <div class="card" style="min-height:300px;overflow-y:scroll;">
       <div class="card-header">
         Orders
       </div>
       <div class="card-body bg-light mt-2"  *ngFor="let order of  OrdersForCurrentUserList">
         <div class="row">
            <div class="col-4">
-            <h6 class="card-title">OrderNo# :{{order.orderid}}</h6>
+            <h6 class="card-title">OrderNo# :{{order.orderid}}   id: {{order.id}}</h6>
             <p class="h6">Date :{{order.OrderDate}}</p>
             <p class="h6"> CustomerName :{{order.CustomerName}}</p>
            </div>
@@ -15,12 +15,13 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <td>ProdID</td>
-                  <td>Name</td>
-                  <td>Category</td>
-                  <td>Quantity</td>
-                  <td>Price</td>
-                  <td colspan="2">Total</td>
+                  <td style="width: 100px;;">ProdID</td>
+                  <td style="width: 100px;;">Name</td>
+                  <td style="width: 100px;;">Category</td>
+                  <td style="width: 100px;;">Quantity</td>
+                  <td style="width: 100px;;">Price</td>
+                  <td colspan="2" style="width: 100px;;">Total</td>
+                  <td style="width: 100px;;"></td>
                 </tr>
               </thead>
               <tbody style="font-size: 14px;">
@@ -31,9 +32,9 @@
                   <td>{{details.Quantity}}</td>
                   <td>{{details.price}}</td>
                   <td>{{details.TotalAmount}}</td>
-  
+                  <td>{{details.orderidd}}</td>
                   <td>          
-                      <button type="button" (click)="retrunOrder()" class="btn btn-info btn-sm"> <i class="fa-solid fa-bags-shopping"></i> 
+                      <button type="button" (click)="retrunOrder(order.id,details.OrderDetailID)" class="btn btn-info btn-sm"> <i class="fa-solid fa-bags-shopping"></i> 
                         <i class="fa-solid fa-bags-shopping"></i>
                         Return </button>
                   </td>
@@ -42,7 +43,6 @@
             </table>
            </div>
         </div>
-       
       </div>
     </div>
   </div>

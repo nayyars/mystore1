@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
+import { LoginService } from '../../../Services/SharedServices/login.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,12 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+    constructor( private _LoginService:LoginService, private _router:Router){
+       const username=this._LoginService.GetUserName();
+       if(username=='nayyar'){
+          
+       } else{
+        this._router.navigate(['home/lastorders']);
+       }
+    }
 }
